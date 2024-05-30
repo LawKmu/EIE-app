@@ -24,6 +24,8 @@ class PostController extends Controller
         if (request()->hasFile('image')) {
             $image = request()->file('image');
             $imageContents = file_get_contents($image->getRealPath());
+
+            
             // $base64Image = base64_encode($imageContents);
             // $imageExtension = $image->getClientOriginalExtension();
             // $imageFileName = Str::random(20) . '.' . $imageExtension; 
